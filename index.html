@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Главная — docs-automation-study</title>
+<meta name="description" content="Учебная документация по практической работе 3.4: Docs-as-Code, GitHub Pages, PlantUML, OpenAPI.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">DS</span> docs-automation-study</a>
+    <nav class="top-nav">
+      <a href="index.html">Главная</a>
+      <a href="docs/01_intro.html">Введение</a>
+      <a href="docs/02_api.html">API</a>
+      <a href="docs/03_report.html">Отчёт</a>
+      <a href="api/index.html">Swagger UI</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <h2>Документация</h2>
+    <nav>
+      <a href="index.html" class="active">Главная</a>
+      <a href="docs/01_intro.html" class="">01. Введение</a>
+      <a href="docs/02_api.html" class="">02. Описание API</a>
+      <a href="docs/03_report.html" class="">03. Отчёт о работе</a>
+      <a href="api/index.html">Swagger UI</a>
+    </nav>
+    <div class="meta">
+      Практическая работа 3.4<br>
+      Docs-as-Code<br><br>
+      <span class="badge">main</span>
+    </div>
+  </aside>
+  <main class="content">
+<div class="hero">
+<h1>Документация как код</h1>
+<p>Учебный конвейер разработки технической документации: Markdown → Git → автоматическая сборка сайта → PlantUML → OpenAPI/Swagger UI.</p>
+</div>
+<div class="cards">
+  <a class="card" href="docs/01_intro.html"><strong>01. Введение</strong><span>Цели, единый источник и схема процесса.</span></a>
+  <a class="card" href="docs/02_api.html"><strong>02. API</strong><span>Функция входа, параметры и ответы.</span></a>
+  <a class="card" href="api/index.html"><strong>Swagger UI</strong><span>Интерактивный справочник из OpenAPI.</span></a>
+</div>
+<h1 id="docs-automation-study">docs-automation-study</h1>
+<p>Учебный репозиторий по практической работе 3.4<br>
+«Автоматизация разработки технической документации: от хаоса к конвейеру».</p>
+<h2 id="_1">Что внутри</h2>
+<table>
+<thead>
+<tr>
+<th>Путь</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/01_intro.md</code></td>
+<td>Введение, цели и схема процесса публикации</td>
+</tr>
+<tr>
+<td><code>docs/02_api.md</code></td>
+<td>Описание функции входа в API</td>
+</tr>
+<tr>
+<td><code>docs/03_report.md</code></td>
+<td>Отчёт о выполнении работы</td>
+</tr>
+<tr>
+<td><code>openapi/openapi.yaml</code></td>
+<td>Машиночитаемая спецификация OpenAPI 3.0</td>
+</tr>
+<tr>
+<td><code>plantuml/sequence.puml</code></td>
+<td>Исходный текст схемы PlantUML</td>
+</tr>
+<tr>
+<td><code>index.html</code>, <code>assets/</code></td>
+<td>Статический сайт для GitHub Pages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Принципы</h2>
+<ul>
+<li>единый источник документации (Single Source of Truth);</li>
+<li>версионирование каждого изменения через Git;</li>
+<li>текстовая разметка Markdown вместо «ручного» форматирования;</li>
+<li>автоматическая сборка сайта из репозитория;</li>
+<li>схемы и справочники API генерируются из текстовых исходников.</li>
+</ul>
+<h2 id="_3">Публикация</h2>
+<pre><code class="language-bash">git remote add origin https://github.com/&lt;username&gt;/docs-automation-study.git
+git push -u origin main
+</code></pre>
+<p>Затем: <strong>Settings → Pages → Deploy from a branch → main → / (root)</strong>.</p>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="line">© 2026 Карнилов Д. Е., группа ИСП-241/9. Учебный проект по автоматизации технической документации.</div>
+</footer>
+</body>
+</html>
