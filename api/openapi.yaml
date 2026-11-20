@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  title: API для входа
+  version: 1.0.0
+  description: >
+    Учебный API, демонстрирующий авторизацию пользователя по логину и паролю.
+paths:
+  /login:
+    post:
+      summary: Авторизация пользователя
+      description: Принимает логин и пароль, возвращает токен доступа.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - login
+                - password
+              properties:
+                login:
+                  type: string
+                  example: student
+                password:
+                  type: string
+                  format: password
+                  example: secret123
+      responses:
+        '200':
+          description: Успех
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: demo-token-123
+                  expiresIn:
+                    type: integer
+                    example: 3600
+        '401':
+          description: Неверный логин или пароль
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid credentials
