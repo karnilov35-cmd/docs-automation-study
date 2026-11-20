@@ -25,8 +25,9 @@
 ## Публикация
 
 ```bash
-git remote add origin https://github.com/<username>/docs-automation-study.git
+git remote add origin https://github.com/karnilov35-cmd/docs-automation-study.git
 git push -u origin main
 ```
 
 Затем: **Settings → Pages → Deploy from a branch → main → / (root)**.
+
