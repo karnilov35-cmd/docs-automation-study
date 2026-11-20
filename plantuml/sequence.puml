@@ -1,0 +1,8 @@
+@startuml
+actor Студент
+participant "GitHub Pages" as Git
+Студент -> Git: Редактирует .md файл
+Студент -> Git: Нажимает Commit
+Git -> Git: Автоматическая сборка
+Git -> Студент: Выдает ссылку на сайт
+@enduml
